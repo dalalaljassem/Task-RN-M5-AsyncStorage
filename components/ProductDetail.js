@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Text,
   Image,
@@ -7,9 +7,10 @@ import {
   SafeAreaView,
   Button,
   StyleSheet,
-} from 'react-native';
-import cartStore from '../stores/cartStore';
-import productStore from '../stores/productStore';
+} from "react-native";
+import cartStore from "../stores/cartStore";
+import productStore from "../stores/productStore";
+import Toast from "react-native-toast-message";
 
 export function ProductDetail({ route }) {
   const product = productStore.getProductById(route.params.id);
@@ -35,11 +36,11 @@ export function ProductDetail({ route }) {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: 'white',
+    backgroundColor: "white",
     borderRadius: 16,
     shadowOpacity: 0.2,
     shadowRadius: 4,
-    shadowColor: 'black',
+    shadowColor: "black",
     shadowOffset: {
       height: 0,
       width: 0,
@@ -49,24 +50,24 @@ const styles = StyleSheet.create({
   },
   image: {
     height: 300,
-    width: '100%',
+    width: "100%",
   },
   infoContainer: {
     padding: 16,
   },
   name: {
     fontSize: 22,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   price: {
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
     marginBottom: 8,
   },
   description: {
     fontSize: 16,
-    fontWeight: '400',
-    color: '#787878',
+    fontWeight: "400",
+    color: "#787878",
     marginBottom: 16,
   },
 });
